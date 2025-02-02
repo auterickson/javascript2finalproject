@@ -1,0 +1,193 @@
+@use "sass:color";
+@import 'quasar-variables.sass';
+@import 'quasar/src/css/index';
+// ICONS
+@import '@quasar/extras/material-icons/material-icons.css';
+@import '@quasar/extras/material-icons-outlined/material-icons-outlined.css';
+@import '@quasar/extras/material-icons-sharp/material-icons-sharp.css';
+@import '@quasar/extras/material-symbols-outlined/material-symbols-outlined.css';
+@import '@quasar/extras/material-symbols-rounded/material-symbols-rounded.css';
+@import '@quasar/extras/material-symbols-sharp/material-symbols-sharp.css';
+
+@import 'quasar-variables.sass'; // Ensure your theme variables are loaded
+
+// Global body styles
+/* Base Styling */
+body {
+  background-color: $secondary;
+  //color: $text-primary;
+  color: $accent;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.q-page {
+  padding: 20px;
+}
+
+/* Header */
+.q-header {
+  background-color: $primary;
+  color: $dark;
+}
+
+.q-toolbar-title {
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bold;
+  font-family: 'Advent Pro', sans-serif;
+  color: $accent;
+}
+
+/* Buttons (Main, Search, Genre) */
+.q-btn {
+  &.q-btn--primary {
+    background-color: $primary;
+    color: $light-green;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+
+  &.q-btn--secondary {
+    background-color: $light-green;
+    color: $secondary;
+    border: 1px solid $secondary;
+  }
+
+  &.q-btn--outline {
+    border: 1px solid $secondary;
+  }
+
+  &:hover {
+    background-color: $accent;
+    color: $dark;
+  }
+
+  &.q-mr-sm {
+    margin-right: 8px;
+  }
+
+  &.q-my-md {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Genre Buttons (Pill style) */
+.genre-buttons {
+  color: $primary;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.genre-btn {
+  border-radius: 20px;
+  background-color: $secondary;
+  color: $text-primary;
+  font-weight: bold;
+  padding: 6px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  &.q-btn--primary {
+    background-color: $accent !important;
+    color: $dark;
+  }
+
+  &.q-btn--secondary {
+    background-color: transparent;
+    color: $text-primary;
+    border: 1px solid $secondary;
+  }
+
+  &:hover {
+    background-color: $secondary, 10%; /* Lighten background on hover */
+  }
+}
+
+/* Book Thumbnail */
+.book-thumbnail {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.q-footer {
+  background-color: $primary;
+  color: $secondary;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Book List */
+.q-list {
+  margin-top: 20px;
+}
+
+.q-item {
+  border-bottom: 1px solid $secondary
+}
+
+.q-item-section {
+  display: flex;
+  align-items: center;
+}
+
+.q-item-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.q-item-label.caption {
+  font-size: 12px;
+  color: $secondary;
+}
+
+/* Spinner (Loading) */
+.q-spinner {
+  margin: 20px 0;
+}
+
+.text-h6{
+  color: $dark;
+}
+
+/* Cards */
+.q-card {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.q-card-section {
+  padding: 20px;
+}
+
+.q-card-actions {
+  background-color: $secondary;
+  border-top: 1px solid $primary;
+  padding: 15px;
+}
+
+/* Book Actions */
+.book-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Placeholder (No Data State) */
+.q-icon {
+  color: $secondary;
+}
+
+.q-input{
+  background-color: $primary;
+  color: $dark;
+}
+
