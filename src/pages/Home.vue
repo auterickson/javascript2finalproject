@@ -136,7 +136,7 @@ export default {
       <div v-if="loading" class="row q-col-gutter-md">
         <div class="col-12 col-md-6 col-lg-2" v-for="index in 5" :key="index">
           <q-card class="book-card">
-            <q-skeleton height="400px" square />
+            <q-skeleton height="300px" width="200px" />
             <q-card-section>
               <q-skeleton type="text" />
               <q-skeleton type="text" />
