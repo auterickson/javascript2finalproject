@@ -151,12 +151,8 @@ export default {
       </div>
 
       <!-- Actual Book Cards -->
-      <div v-else class="row q-col-gutter-md">
-        <div
-            class="col-12 col-md-6 col-lg-2"
-            v-for="book in userBooks"
-            :key="book.id"
-        >
+      <div v-else class="book-grid">
+        <div v-for="book in userBooks" :key="book.id" class="book-item">
           <q-card class="book-card">
             <q-img
                 :src="book.coverURL || '/default-cover.png'"
@@ -178,9 +174,28 @@ p {
   text-align: center;
   font-size: 1.2rem;
   color: #777;
+  margin-top: 16px;
 }
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between cards */
+  justify-content: space-evenly; /* Distribute cards evenly */
+}
+
+.book-item {
+  flex: 0 0 200px; /* Fixed card width */
+  max-width: 250px;
+}
+
 .book-card {
   margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
 }
 
 .book-cover {
@@ -191,11 +206,26 @@ p {
 
 .q-card-section {
   height: 250px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
 }
 
 .text-h6 {
   margin-top: 10px;
   font-size: 1.1rem;
   font-weight: bold;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.q-pa-md{
+  padding: 24px;
 }
 </style>
