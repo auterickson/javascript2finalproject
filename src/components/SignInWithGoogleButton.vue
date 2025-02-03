@@ -43,6 +43,7 @@ export default {
   font-size: 14px;
   height: 40px;
   letter-spacing: 0.25px;
+  margin-top: 20px;
   padding: 0 12px;
   display: flex;
   align-items: center;

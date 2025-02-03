@@ -36,7 +36,7 @@ export default {
 
         const newUser = new User(user.uid, user.email, user.displayName, user.photoURL);
         await UserCollection.setUser(newUser);
-        console.log("Google signup successful");
+       console.log("Google signup successful");
         this.$router.push({ name: "home" });
       } catch (error) {
         console.error("Error during Google signup: ", error);
@@ -68,7 +68,7 @@ export default {
 
 <template>
   <q-page class="q-pa-lg flex justify-center content-center">
-    <div>
+    <div class="signup-container">
       <h3 class="section-header">Create a New Account</h3>
       <!-- Signup Form -->
       <q-form @submit.prevent="signUpWithEmail">
@@ -93,7 +93,7 @@ export default {
             type="password"
             :rules="['required', 'minLength:6']"
         />
-        <q-btn label="Sign Up" type="submit" color="primary" />
+        <q-btn label="Sign Up" type="submit" color="primary" class="full-width q-mt-md" />
       </q-form>
 
       <!-- Google Sign-up Button -->
@@ -102,6 +102,7 @@ export default {
       <div class="q-mt-md text-center">
         <span>Already have an account?</span>
         <q-btn
+            class="q-pa-sm"
             label="Login"
             color="secondary"
             flat
@@ -119,4 +120,5 @@ export default {
   text-align: center;
   color: #162114FF;
 }
+
 </style>
